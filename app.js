@@ -1,3 +1,5 @@
+console.log('Application running on www.<host>: 8080 port');
+
 var http = require('http').createServer(handler);
 var fs = require('fs');
 var io = require('socket.io')(http);
