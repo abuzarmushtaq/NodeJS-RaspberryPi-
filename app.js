@@ -35,6 +35,5 @@ io.sockets.on('connection', function (socket) {
 process.on('SIGINT', function () { 
   LED.writeSync(0);
   LED.unexport(); 
-  pushButton.unexport();
   process.exit();
 }); 
