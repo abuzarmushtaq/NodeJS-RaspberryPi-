@@ -1,0 +1,23 @@
+{
+  "name": "raspberry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abuzarmushtaq/NodeJS-RaspberryPi.git"
+  },
+  "author": "Abuzar Mushtaq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abuzarmushtaq/NodeJS-RaspberryPi/issues"
+  },
+  "homepage": "https://github.com/abuzarmushtaq/NodeJS-RaspberryPi#readme",
+  "devDependencies": {
+    "socket.io": "^2.0.4",
+    "onoff": "*"
+  }
+}
