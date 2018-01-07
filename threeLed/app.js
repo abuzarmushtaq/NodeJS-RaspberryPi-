@@ -6,8 +6,8 @@ var io = require('socket.io')(http);
 var Gpio = require('onoff').Gpio;
 
 var switch1 = new Gpio(4, 'out');
-var switch2 = new Gpio(11,out);
-var switch3 = new Gpio(26,out);
+var switch2 = new Gpio(11, 'out');
+var switch3 = new Gpio(26, 'out');
 
 
 http.listen(8080); //listen to port 8080
@@ -53,7 +53,7 @@ io.sockets.on('connection', function (socket) {
 });
 
 process.on('SIGINT', function () {
-    
+
     switch1.writeSync(0);
     switch1.unexport();
 
