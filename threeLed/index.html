@@ -165,12 +165,16 @@
 
     <script>
         var socket = io();
-        window.addEventListener("load", function () {
-            var btn = document.getElementById("switch");
+        window.onload =  function events() {
+
+            // var btn = document.getElementById("switch");
+            // var btn2 = document.getElementById('switch1');
+            // var btn3 = document.getElementById('switch3');
+
             btn.addEventListener("change", function () {
                 socket.emit("light", Number(this.checked));
             });
-        });
+        };
         socket.on('light', function (data) {
             document.getElementById("light").checked = data;
             socket.emit("light", data);
