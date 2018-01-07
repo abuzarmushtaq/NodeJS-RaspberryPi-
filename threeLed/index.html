@@ -167,18 +167,37 @@
         var socket = io();
         window.onload =  function events() {
 
-            var btn = document.getElementById("switch");
-            // var btn2 = document.getElementById('switch1');
+            var btn1 = document.getElementById("switch1");
+            // var btn2 = document.getElementById('switch2');
             // var btn3 = document.getElementById('switch3');
 
-            btn.addEventListener("change", function () {
+            btn1.addEventListener("change", function () {
                 socket.emit("light", Number(this.checked));
             });
+
+            // btn2.addEventListener("change", function () {
+            //     socket.emit("light", Number(this.checked));
+            // });
+
+            // btn3.addEventListener("change", function () {
+            //     socket.emit("light", Number(this.checked));
+            // });
         };
+
         socket.on('light', function (data) {
             document.getElementById("light").checked = data;
             socket.emit("light", data);
         });
+
+        // socket.on('light', function (data) {
+        //     document.getElementById("light").checked = data;
+        //     socket.emit("light", data);
+        // });
+
+        // socket.on('light', function (data) {
+        //     document.getElementById("light").checked = data;
+        //     socket.emit("light", data);
+        // });
     </script>
 </body>
 
