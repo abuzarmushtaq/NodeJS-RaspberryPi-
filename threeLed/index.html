@@ -132,25 +132,27 @@
 </head>
 
 <body>
-
-    <div class="switch">
-        <input type="checkbox" name="toggle" id="switch">
-        <label for="toggle">
-            <i></i>
-        </label>
-        <span></span>
-    </div>
-
-    <div class="switch">
-        <input type="checkbox" name="toggle" id="switch">
-        <label for="toggle">
-            <i></i>
-        </label>
-        <span></span>
-    </div>
-
+    <!-- switch 1 -->
     <div class="switch">
         <input type="checkbox" name="toggle" id="switch1">
+        <label for="toggle">
+            <i></i>
+        </label>
+        <span></span>
+    </div>
+
+    <!-- switch 2 -->
+    <div class="switch">
+        <input type="checkbox" name="toggle" id="switch2">
+        <label for="toggle">
+            <i></i>
+        </label>
+        <span></span>
+    </div>
+
+    <!-- switch 3 -->
+    <div class="switch">
+        <input type="checkbox" name="toggle" id="switch3">
         <label for="toggle">
             <i></i>
         </label>
@@ -167,11 +169,11 @@
         var socket = io();
         window.onload =  function events() {
 
-            var btn1 = document.getElementById("switch1");
+            var switch1 = document.getElementById("switch1");
             // var btn2 = document.getElementById('switch2');
             // var btn3 = document.getElementById('switch3');
 
-            btn1.addEventListener("change", function () {
+            switch1.addEventListener("change", function () {
                 socket.emit("light", Number(this.checked));
             });
 
