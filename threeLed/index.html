@@ -170,36 +170,36 @@
         window.onload =  function events() {
 
             var switch1 = document.getElementById("switch1");
-            // var btn2 = document.getElementById('switch2');
-            // var btn3 = document.getElementById('switch3');
+            var switch2 = document.getElementById('switch2');
+            var switch3 = document.getElementById('switch3');
 
             switch1.addEventListener("change", function () {
-                socket.emit("light", Number(this.checked));
+                socket.emit("light1", Number(this.checked));
             });
 
-            // btn2.addEventListener("change", function () {
-            //     socket.emit("light", Number(this.checked));
-            // });
+            switch2.addEventListener("change", function () {
+                socket.emit("light2", Number(this.checked));
+            });
 
-            // btn3.addEventListener("change", function () {
-            //     socket.emit("light", Number(this.checked));
-            // });
+            switch3.addEventListener("change", function () {
+                socket.emit("light3", Number(this.checked));
+            });
         };
 
-        socket.on('light', function (data) {
+        socket.on('light1', function (data) {
             document.getElementById("light").checked = data;
-            socket.emit("light", data);
+            socket.emit("light1", data);
         });
 
-        // socket.on('light', function (data) {
-        //     document.getElementById("light").checked = data;
-        //     socket.emit("light", data);
-        // });
+        socket.on('light2', function (data) {
+            document.getElementById("light").checked = data;
+            socket.emit("light2", data);
+        });
 
-        // socket.on('light', function (data) {
-        //     document.getElementById("light").checked = data;
-        //     socket.emit("light", data);
-        // });
+        socket.on('light3', function (data) {
+            document.getElementById("light").checked = data;
+            socket.emit("light3", data);
+        });
     </script>
 </body>
 
